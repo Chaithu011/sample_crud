@@ -1,0 +1,25 @@
+sample_work.dashboard:
+  path: '/dashboard'
+  defaults:
+    _controller: '\Drupal\sample_work\Controller\SampleWorkController::dashboard'
+    _title: 'Sample Work'
+  requirements:
+    _permission: 'access content'
+
+entity.sample_work_entity.delete_confirm:
+  path: '/dashboard/{id}/delete'
+  defaults:
+  # Calls the form.delete.
+    _entity_form: sample_work_entity.delete
+    _title: 'Delete Entity'
+  requirements:
+    _role: 'authenticated'
+
+entity.sample_work_entity.edit_form:
+  path: '/dashboard/{id}/edit'
+  defaults:
+    _controller: '\Drupal\sample_work\Controller\SampleWorkController::content'
+    # _entity_form: efs_organization.add
+    _title: 'Edit Sample Entity'
+  requirements:
+    _role: 'authenticated'
