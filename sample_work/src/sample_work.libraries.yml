@@ -1,0 +1,8 @@
+sample_work_library:
+  version: 1.x
+  css:
+      https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css: {external: TRUE}
+  dependencies:
+    - core/jquery
+    - core/drupal.dialog.ajax
+    - core/jquery.form'
